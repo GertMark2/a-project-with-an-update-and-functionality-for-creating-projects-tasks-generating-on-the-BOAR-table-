@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Delete Project</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tasks/confirm_delete_project.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="confirm-delete-container">
+        <h1>Confirm Delete Project</h1>
+        <p>Are you sure you want to delete the project "{{ project.title }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="confirm-button">Confirm Delete</button>
+            <a href="{% url 'project_detail' project.pk %}" class="cancel-button">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

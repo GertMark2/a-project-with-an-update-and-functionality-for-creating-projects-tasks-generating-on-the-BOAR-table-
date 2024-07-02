@@ -1,0 +1,98 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.task-list-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.task-list-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.task-list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list-container li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.task-list-container .task-link {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.task-list-container .task-link:hover {
+    text-decoration: underline;
+}
+
+.task-list-container .task-project {
+    color: #666;
+    margin: 0 0 5px;
+}
+
+.task-list-container .task-status {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.task-list-container .task-status.completed {
+    color: green;
+}
+
+.task-list-container .task-status.in-progress {
+    color: orange;
+}
+
+.task-list-container .task-status.created {
+    color: #2196F3; /* Blue color for 'created' status */
+}
+
+.task-list-container .create-new, .task-list-container .back-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.task-list-container .create-new:hover {
+    background-color: #45a049;
+}
+
+.task-list-container .back-link {
+    background-color: #2196F3;
+}
+
+.task-list-container .back-link:hover {
+    background-color: #1976D2;
+}

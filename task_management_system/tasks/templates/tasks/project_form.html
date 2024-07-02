@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Project</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tasks/cr_projects.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="project-form-container">
+        <h1>Create Project</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_title">Title</label>
+                {{ form.title }}
+            </div>
+            <div class="form-group">
+                <label for="id_description">Description</label>
+                {{ form.description }}
+            </div>
+            <button type="submit">Create Project</button>
+            <a href="{% url 'project_task_list' %}" class="back-link">Back to Projects and Tasks</a>
+        </form>
+    </div>
+</body>
+</html>
+

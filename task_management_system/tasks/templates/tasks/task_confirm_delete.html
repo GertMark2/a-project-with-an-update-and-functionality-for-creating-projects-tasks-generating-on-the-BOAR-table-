@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Delete Task</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tasks/task_confirm_delete.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="task-confirm-delete-container">
+        <h1>Подтвердите удаление задачи</h1>
+        <p>Вы уверены, что хотите удалить "{{ task.title }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="confirm-btn">Подтвердить удаление</button>
+        </form>
+        <a href="{% url 'project_task_list' %}" class="cancel-btn">Отмена</a>
+    </div>
+</body>
+</html>

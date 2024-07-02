@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Detail</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tasks/detail.tasks.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="task-detail-container">
+        <h1>Task Detail</h1>
+        <p><strong>Project:</strong> {{ task.project }}</p>
+        <p><strong>Title:</strong> {{ task.title }}</p>
+        <p><strong>Description:</strong> {{ task.description }}</p>
+        <p><strong>Assigned To:</strong> {{ task.assigned_to }}</p>
+        <p><strong>Due Date:</strong> {{ task.due_date }}</p>
+        <p><strong>Status:</strong> {{ task.get_status_display }}</p>
+        <div class="button-group">
+            <a href="{% url 'task_update' task.pk %}" class="btn">Edit</a>
+            <a href="{% url 'task_delete' task.pk %}" class="btn btn-danger">Delete</a>
+            <a href="{% url 'project_task_list' %}" class="btn">Back to Projects and Tasks</a>
+        </div>
+    </div>
+</body>
+</html>

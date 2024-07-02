@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tasks/task_list.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="task-list-container">
+        <h1>Список задач</h1>
+        <ul>
+            {% for task in tasks %}
+            <li>
+                <a href="{% url 'task_detail' task.pk %}" class="task-link">{{ task.title }}</a>
+                <p class="task-project">Проект: {{ task.project.title }}</p>
+                <p class="task-status {{ task.status }}">{{ task.get_status_display }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'task_create' %}" class="create-new">Создать новую задачу</a>
+        <a href="{% url 'project_task_list' %}" class="back-link">Посмотреть все проекты и задачи</a>
+    </div>
+</body>
+</html>

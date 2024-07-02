@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://images.wallpaperscraft.ru/image/single/gory_vershiny_tuman_128806_3840x2160.jpg') no-repeat center center/cover;
+}
+
+.register-container {
+    position: relative;
+    width: 400px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    text-align: center;
+}
+
+.register-container h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container form .form-group {
+    margin-bottom: 20px;
+}
+
+.register-container form .form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.register-container form .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1), inset -3px -3px 5px rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.register-container form .form-group input::placeholder {
+    color: #e5e5e5;
+}
+
+.register-container form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: #6c63ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1), -3px -3px 5px rgba(255, 255, 255, 0.7);
+    transition: background 0.3s ease;
+}
+
+.register-container form button:hover {
+    background: #5753d9;
+}
+
+.register-container .links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-container .links a {
+    color: #6c63ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-container .links a:hover {
+    color: #5753d9;
+}

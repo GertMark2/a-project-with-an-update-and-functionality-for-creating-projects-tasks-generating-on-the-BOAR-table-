@@ -1,0 +1,64 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.task-confirm-delete-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.task-confirm-delete-container h1 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.task-confirm-delete-container p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.task-confirm-delete-container form {
+    margin-bottom: 15px;
+}
+
+.confirm-btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.confirm-btn:hover {
+    background-color: #c62828;
+}
+
+.cancel-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cancel-btn:hover {
+    background-color: #45a049;
+}
